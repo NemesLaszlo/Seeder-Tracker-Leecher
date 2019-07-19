@@ -10,7 +10,7 @@ Az egyszerűség kedvéért a fájlneveket és a fájlokat is String-ekkel, a h�
 
 Az egyes osztályok szerkezetére és viselkedésére az alábbi követelmények vonatkoznak:
 
-#Tracker
+# Tracker
 
 Egy fájlnévhez portokat rendelő asszociatív adatszerkezetben tartja számon, hogy melyik Leecher csomópont melyik fájlt tárolja. Az adatszerkezet legyen objektumszintű attribútum.
 void storeFileId(String fileId, Integer peerPort) metódus hozzárendel az adatszerkezetben egy fájlnévhez egy portot.
@@ -22,7 +22,8 @@ Amennyiben a seed üzenetet kapja a csomóponttól, vár egy további, egész sz
 A kiszolgálást követően bontja a kapcsolatot a csomóponttal, és várja a következő felcsatlakozó csomópontot.
 A main metódus belépési pont példányosít egy Tracker objektumot és elindítja azt a start metódussal. Parancssori argumentumokat nem vár.
 
-#Seeder
+# Seeder
+
 Parancssori argumentumok:
 
 Az első parancssori argumentum egy egész szám port, amelyre majd a letölteni szándékozó csomópontok csatlakozhatnak.
@@ -34,7 +35,8 @@ Futása során sorban a következő két lépést hajtja végre:
 Regisztrálja az 55555 porton várakozó Tracker-be a fájlneveket a saját portjával. Ehhez először elküldi a seed üzenetet, majd a saját portját, majd elküldi a fájlneveket (pl. k1, k2, k3). A küldés után lezárja a kapcsolatot.
 Várakozik felcsatlakozó csomópontokra a saját portján. A felcsatlakozott csomóponttól egy fájlnevet kap (pl. k1), válaszul pedig visszaküldi a fájlnévhez tartozó fájlt (pl. v1). A küldés után lezárja a kapcsolatot.
 
-#Leecher
+# Leecher
+
 Parancssori argumentum:
 
 Egy fájlnév (pl. k1).
